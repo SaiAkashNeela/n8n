@@ -12,8 +12,8 @@ RUN apk add --update --no-cache \
     curl \
     ffmpeg
 
-# Install yt-dlp
-RUN pip3 install --no-cache-dir yt-dlp
+# Install yt-dlp (using --break-system-packages for Docker container)
+RUN pip3 install --no-cache-dir --break-system-packages yt-dlp
 
 USER node
 
